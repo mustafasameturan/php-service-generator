@@ -14,12 +14,9 @@ app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseMiddleware<ApiKeyAuthorizationMiddleware>();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseDeveloperExceptionPage();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseDeveloperExceptionPage();
 
 app.UseHttpsRedirection();
 

@@ -32,6 +32,7 @@ public class GeneratorController : ControllerBase
             string baseDirectoryPath = Path.Combine(currentDirectory, "Outputs");
             string directoryPath = Path.Combine(baseDirectoryPath, folderName);
 
+            
             if (Directory.Exists(directoryPath))
             {
                 string zipFileName = folderName + ".zip";

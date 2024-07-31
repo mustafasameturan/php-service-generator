@@ -25,7 +25,7 @@ jobs:
       run: dotnet build ./PHPServiceGenerator.sln --configuration Release
     
     - name: Publish
-      run: dotnet publish ./PHPServiceGenerator.sln --configuration Release --no-build
+      run: dotnet publish ./PHPServiceGenerator.sln/KoGenerator.csproj --configuration Release --no-build --output '${{ secrets.AZURE_PUBLISH_PROFILE }}'
       
     - name: Deployment
       uses: azure/webapps/deploy@v2
